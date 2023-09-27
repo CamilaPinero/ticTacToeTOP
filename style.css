@@ -1,0 +1,20 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: monospace;
+}
+
+.board {
+	display: grid;
+	width: 600px;
+	height: 600px;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.field {
+	background-color: gray;
+	border: 1px solid gainsboro;
+	font-size: 10em;
+}
