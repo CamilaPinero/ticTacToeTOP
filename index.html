@@ -8,23 +8,73 @@
 	</head>
 	<body>
 		<div class="marks">
-			<button class="mark" id="x">X</button>
-			<button class="mark" id="o">O</button>
+			<button
+				class="mark"
+				id="x"
+				draggable="true"
+				ondragstart="gameBoard.drag(event)"
+			>
+				X
+			</button>
+			<button
+				class="mark"
+				id="o"
+				draggable="true"
+				ondragstart="gameBoard.drag(event)"
+			>
+				O
+			</button>
 		</div>
 
 		<div class="controls">
 			<button class="reset">Reset</button>
 		</div>
 		<div class="board">
-			<button class="field" id="00"></button>
-			<button class="field" id="01"></button>
-			<button class="field" id="02"></button>
-			<button class="field" id="10"></button>
-			<button class="field" id="11"></button>
-			<button class="field" id="12"></button>
-			<button class="field" id="20"></button>
-			<button class="field" id="21"></button>
-			<button class="field" id="22"></button>
+			<button
+				class="field"
+				id="00"
+				ondragover="gameBoard.allowDrop(event)"
+			></button>
+			<button
+				class="field"
+				id="01"
+				ondragover="gameBoard.allowDrop(event)"
+			></button>
+			<button
+				class="field"
+				id="02"
+				ondragover="gameBoard.allowDrop(event)"
+			></button>
+			<button
+				class="field"
+				id="10"
+				ondragover="gameBoard.allowDrop(event)"
+			></button>
+			<button
+				class="field"
+				id="11"
+				ondragover="gameBoard.allowDrop(event)"
+			></button>
+			<button
+				class="field"
+				id="12"
+				ondragover="gameBoard.allowDrop(event)"
+			></button>
+			<button
+				class="field"
+				id="20"
+				ondragover="gameBoard.allowDrop(event)"
+			></button>
+			<button
+				class="field"
+				id="21"
+				ondragover="gameBoard.allowDrop(event)"
+			></button>
+			<button
+				class="field"
+				id="22"
+				ondragover="gameBoard.allowDrop(event)"
+			></button>
 		</div>
 		<script src="script.js"></script>
 	</body>
