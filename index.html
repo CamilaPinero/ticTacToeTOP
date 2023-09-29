@@ -7,27 +7,30 @@
 		<title>Tic Tac Toe</title>
 	</head>
 	<body>
+		<div class="header">
+			<h1>TIC TAC TOE</h1>
+			<h5 style="margin-top: -5px">
+				Pick your mark and drop it on the board!
+			</h5>
+		</div>
+
 		<div class="marks">
-			<button
+			<div
 				class="mark"
 				id="x"
 				draggable="true"
 				ondragstart="gameBoard.drag(event)"
 			>
-				X
-			</button>
-			<button
+				<p>x</p>
+			</div>
+			<div
 				class="mark"
 				id="o"
 				draggable="true"
 				ondragstart="gameBoard.drag(event)"
 			>
-				O
-			</button>
-		</div>
-
-		<div class="controls">
-			<button class="reset">Reset</button>
+				<p>o</p>
+			</div>
 		</div>
 		<div class="board">
 			<button
@@ -75,6 +78,9 @@
 				id="22"
 				ondragover="gameBoard.allowDrop(event)"
 			></button>
+		</div>
+		<div class="controls">
+			<button class="reset">Reset</button>
 		</div>
 		<script src="script.js"></script>
 	</body>

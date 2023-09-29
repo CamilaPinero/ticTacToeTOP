@@ -59,15 +59,6 @@ let gameBoard = (() => {
 		ev.dataTransfer.setData("text", ev.target.id);
 	}
 
-	/* function drop(ev) {
-		ev.preventDefault();
-		let data = ev.dataTransfer.getData("text");
-		if (ev.target === "") {
-			ev.target.appendChild(document.getElementById(data));
-		}
-		console.log(data);
-	} */
-
 	let fields = document.querySelectorAll(".field");
 
 	fields.forEach((field) => {
@@ -76,7 +67,6 @@ let gameBoard = (() => {
 			if (!getField(ubic[0], ubic[1])) {
 				e.target.innerHTML = newPlayer.getplayerMark();
 				setField(ubic[0], ubic[1], e.target.innerHTML);
-				console.log(_board);
 			}
 		});
 	});
@@ -84,7 +74,7 @@ let gameBoard = (() => {
 	return {
 		allowDrop,
 		drag,
-		//drop,
+
 		fields,
 		getField,
 		setField,

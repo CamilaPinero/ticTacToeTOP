@@ -1,20 +1,72 @@
 body {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	font-family: monospace;
+	font-family: arial;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	background: radial-gradient(
+		circle,
+		rgba(242, 234, 255, 0.577468487394958) 0%,
+		rgba(222, 237, 255, 0.4598214285714286) 48%,
+		rgba(200, 240, 255, 0.5690651260504201) 100%
+	);
+}
+.header {
+	text-align: center;
 }
 
 .board {
 	display: grid;
-	width: 600px;
-	height: 600px;
+	width: 400px;
+	height: 400px;
 	grid-template-rows: 1fr 1fr 1fr;
 	grid-template-columns: 1fr 1fr 1fr;
+	gap: 3px;
 }
 
 .field {
-	background-color: gray;
+	background-color: rgb(253, 224, 224);
 	border: 1px solid gainsboro;
-	font-size: 10em;
+	font-size: 6em;
+	border-radius: 5px;
+}
+
+.panel {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.marks {
+	display: flex;
+	flex-direction: row;
+}
+.mark {
+	width: 100px;
+	height: 100px;
+	background-color: #fad2d2b2;
+	margin: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px;
+}
+
+.mark > p {
+	margin: 0;
+	padding: 0;
+	font-size: 6em;
+	margin-top: -20px;
+	overflow: hidden;
+}
+
+.reset {
+	appearance: none;
+	margin: 10px;
+	padding: 10px 15px;
+	border: none;
+	background-color: #ffdfdf;
+	border-radius: 5px;
 }
